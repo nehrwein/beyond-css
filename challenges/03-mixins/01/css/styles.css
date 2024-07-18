@@ -1,0 +1,25 @@
+body {
+  font-family: system-ui;
+  margin: 0;
+}
+
+.section-one,
+.section-two,
+.section-three {
+  text-align: center;
+  padding: 10vh 0;
+}
+
+.section-one {
+  background: linear-gradient(20deg, hotpink, azure);
+}
+
+.section-two {
+  background: linear-gradient(45deg, turquoise, rgb(240, 247, 255));
+}
+
+.section-three {
+  background: linear-gradient(280deg, rgb(255, 228, 105), rgb(255, 244, 240));
+}
+
+/*# sourceMappingURL=styles.css.map */

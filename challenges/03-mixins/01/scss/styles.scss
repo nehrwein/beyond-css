@@ -1,3 +1,7 @@
+@mixin linear-gradient($deg, $start-color, $end-color) {
+  background: linear-gradient($deg, $start-color, $end-color);
+}
+
 body {
   font-family: system-ui;
   margin: 0;
@@ -8,4 +12,16 @@ body {
 .section-three {
   text-align: center;
   padding: 10vh 0;
+}
+
+.section-one {
+  @include linear-gradient(20deg, hotpink, azure);
+}
+
+.section-two {
+  @include linear-gradient(45deg, turquoise, rgb(240, 247, 255));
+}
+
+.section-three {
+  @include linear-gradient(280deg, rgb(255, 228, 105), rgb(255, 244, 240));
 }
