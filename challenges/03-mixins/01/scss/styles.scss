@@ -2,6 +2,35 @@
   background: linear-gradient($deg, $start-color, $end-color);
 }
 
+@mixin pseudo-underline($w, $h, $bg-clr, $ma) {
+  &::after {
+    content: "";
+    display: block;
+    width: $w;
+    height: $h;
+    background-color: rgba($bg-clr, 0.2);
+    margin: $ma auto;
+  }
+}
+
+@mixin ui-element(
+  $color,
+  $bg-color,
+  $hover-color: $color,
+  $hover-bg-color: $bg-color,
+  $size: 1em
+) {
+  padding: $size 3 * $size;
+  color: $color;
+  background-color: $bg-color;
+  display: inline;
+
+  &:hover {
+    color: $hover-color;
+    background-color: $hover-bg-color;
+  }
+}
+
 body {
   font-family: system-ui;
   margin: 0;
@@ -24,4 +53,24 @@ body {
 
 .section-three {
   @include linear-gradient(280deg, rgb(255, 228, 105), rgb(255, 244, 240));
+}
+
+.title {
+  @include pseudo-underline(5rem, 3px, black, 2rem);
+}
+
+.button-one {
+  @include ui-element(white, rgb(175, 43, 109), black, yellow);
+}
+
+.button-two {
+  @include ui-element(white, rgb(16, 89, 97), black, yellow);
+}
+
+.badge-one {
+  @include ui-element(white, rgb(255, 187, 0));
+}
+
+.badge-two {
+  @include ui-element(white, rgb(142, 103, 11));
 }
