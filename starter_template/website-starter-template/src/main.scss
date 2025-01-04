@@ -1,0 +1,15 @@
+@use "base";
+@use "components";
+@use "layout";
+@use "utilities";
+@use "vendor";
+
+body {
+  background-color: tomato;
+}
+
+#app {
+  background-color: cadetblue;
+  width: 10rem;
+  height: 10rem;
+}
